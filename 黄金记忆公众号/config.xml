@@ -1,0 +1,35 @@
+ <widget id="A6021579864710"  version="0.0.1">
+    <name>¼Ò</name>
+    <description>
+        ¼ÒÆ×
+    </description>
+    <author email="zhangkui123888@126.com" href="https://www.boyunweb.com">
+        zhangkui
+    </author>	<feature name="baiduIdentifyOCR">          <param name="APIKey" value="yhTXm3n76f6UcvfvPpGpeOnf"/>          <param name="SecretKey" value="1Tq0IYYXzi5AbTSWeX7zvexIQkU32X6s"/>  </feature>	<feature name="ajpush">        <param name="app_key" value="ae978a55e42cb1555a26abfb" />        <param name="channel" value="999909" />    </feature>	<feature name="aMap">		<param name="android_api_key" value="31f99b5a0b5c29fc1d14b9ee44246dc9" />		<param name="ios_api_key" value="acdb61de229873ce466599069ee4e0ad" /> </feature> <feature name="aMapLBS">   <param name="android_api_key" value="31f99b5a0b5c29fc1d14b9ee44246dc9" />		<param name="ios_api_key" value="acdb61de229873ce466599069ee4e0ad" /> </feature>	<feature name="wx">		<param name="urlScheme" value="wx74fc5a23a0f2df97"/>		<param name="apiKey" value="wx74fc5a23a0f2df97"/>		<param name="apiSecret" value="9122f514f7c71a41f43c1c0faed6e3dd"/>	</feature>	  <feature name="bdTTS">		<param  name="appId_iOS" value="17759766"/>		<param  name="apiKey_iOS" value="ECjjjRQ6t6QG2obMn4csfzej"/>		<param  name="secretKey_iOS" value="h7MpdsybhTBRg0IvV4V0CxlrZwIh8n2Q"/>		<param  name="appId_android" value="17759720"/>		<param  name="apiKey_android" value="rvBVv5npq3Vr7OtxR1cgkLVM"/>		<param  name="secretKey_android" value="Obv6hNqGLiW113WYPyKKyyvGn4cctFN2"/>    </feature>
+      <feature name="aliPayPlus">
+        <param name="urlScheme" value="AliPayPlusA6025414227502" />
+    </feature> 
+    <content src="index_old.html" />
+    <access origin="*" />
+  <preference name="pageBounce" value="false"/>  <preference name="customRefreshHeader" value="UIPullRefresh"/>
+
+	<preference name="appBackground" value="rgba(0,0,0,0.0)"/>
+	<preference name="windowBackground" value="rgba(0,0,0,0.0)"/>
+	<preference name="frameBackgroundColor" value="rgba(0,0,0,0.0)"/>
+	<preference name="hScrollBarEnabled" value="true"/>
+	<preference name="vScrollBarEnabled" value="true"/>
+	<preference name="autoLaunch" value="true"/>
+	<preference name="fullScreen" value="false"/>
+	<preference name="autoUpdate" value="true" />
+	<preference name="smartUpdate" value="false" />
+	<preference name="debug" value="true"/>
+	<preference name="statusBarAppearance" value="true"/>  <preference name="iOS7StatusBarAppearance" value="true"/>
+	<permission name="readPhoneState" />
+	<permission name="camera" />
+	<permission name="record" />
+	<permission name="location" />
+	<permission name="fileSystem" />
+	<permission name="internet" />
+	<permission name="bootCompleted" />
+	<permission name="hardware" />
+</widget>

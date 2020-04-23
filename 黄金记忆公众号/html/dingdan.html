@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>家通</title>
+<meta http-equiv="Content-Type" content="textml; charset=GBK">
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <link href="../css/dd_style.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="../script/jquery.min.js" ></script>
+  	    <script type="text/javascript" src="../script/amazeui.min.js" ></script>
+  			<script type="text/javascript" src="../script/api.js"></script>
+   			<script type="text/javascript" src="../script/config.js"></script>
+  			<script type="text/javascript" src="../script/upload.js"></script>
+  			<script type="text/javascript" src="../script/vue.min.js"></script>
+    </head>
+    <body>
+        <section class="aui-flexView">
+            <header class="aui-navBar aui-navBar-fixed">
+                <a href="javascript:history.back(-1);" class="aui-navBar-item">
+                    <i class="icon icon-return"></i>
+                </a>
+                <div class="aui-center">
+                    <span class="aui-center-title">抢单记录</span>
+                </div>
+
+            </header>
+            <section class="aui-scrollView">
+                <div class="aui-order-title">
+
+
+
+                </div>
+            </section>
+        </section>
+        <div id="temps" style="display:none;">
+
+          <div class="aui-order-box" style="position:relative;">
+              <a href="{url}" class="aui-well-item">
+                  <div class="aui-well-item-bd">
+                      <h3>单号：00000000{id}</h3>
+                  </div>
+                  <span class="aui-well-item-fr">{status}</span>
+              </a>
+              <p class="aui-order-fl aui-order-time">{xdsj}</p>
+              <p class="aui-order-fl aui-order-address">{fhdz}</p>
+              <p class="aui-order-fl aui-order-door">{shrdz}</p>
+              <img src='{pic}' style='width:60px;position:absolute;bottom:10px;right:10px;'>
+          </div>
+        </div>
+
+				<script type="text/javascript" src="../script/commen.js" ></script>
+        <script type="text/javascript" src="/A6021579864710/static/js/1587545161788.js"></script>
+    </body>
+</html>
+
+

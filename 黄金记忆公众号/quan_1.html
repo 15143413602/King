@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="GBK">
+	<title>我的评价列表</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<link href="./css/k_style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="./script/api.js"></script>
+	 <script type="text/javascript" src="./script/fp_jquery.min.js"></script>
+	 <script type="text/javascript" src="./script/commen.js"></script>
+	 <script type="text/javascript" src="./script/config.js"></script>
+	 <script type="text/javascript" src="./script/upload.js"></script>
+	 <script type="text/javascript" src="./script/vue.min.js"></script>
+	 <link rel="stylesheet" href="./css/pwdInput.css">
+	 <script src="./script/pwdInput.js"></script>
+
+	<link type="text/css" href="/A6021579864710/static/css/1587545162410.css" rel="stylesheet">
+</head>
+<body  >
+<section class="aui-flexView">
+
+	<section class="aui-scrollView">
+		<div class="aui-head-box">
+			<header class="aui-navBar aui-navBar-fixed" style="    top: 18px;position: absolute; width: 100%; display: flex; z-index: 102; background: transparent; color: #FFF;">
+				<a href="javascript:history.back();" class="aui-navBar-item">
+						<i class="icon icon-return" style="background:url('./image/back.png');background-size: 100%;"></i>
+				</a>
+				<div class="aui-center">
+					<span class="aui-center-title" style="color: #FFF; font-size: 1.2rem;">我的评论</span>
+				</div>
+
+			</header>
+			<div class="aui-user-img">
+				<img src="./images/t_default.jpg" style="border-radius:50%" alt="" class="M_pic">
+			</div>
+			<div class="aui-user-name">
+				<h2><i class="M_name">--</i> <img src="./images/k_vip.png" alt="" >  <em style="font-size:12px;">普通会员</em></h2>
+			</div>
+
+			<a href="javascript:;" class="myeye" style="position:absolute;right:20px;bottom:30%;min-width:auto;" onclick="hideUser()">
+					<i class="icon icon-return" style="background:url('./image/eye.png')  no-repeat;background-size: 100%;width:30px ;height:30px;"></i>
+			</a>
+			<div class="aui-user-text">
+				<span>今日访客 <em class="M_pcount">0</em></span>
+				<span>访客总量 <em class="M_mcount">0</em></span>
+			</div>
+			<img src="./images/k_head.png" alt="">
+		</div>
+
+		<div class="aui-tab" data-ydui-tab>
+			<div class="b-line">
+				<ul class="tab-nav">
+					<li class="tab-nav-item tab-active">
+						<a href="javascript:;" onclick="changeLoadList(0)">
+							<span class="showLy">好友留言</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="tab-panel">
+				<div class="tab-panel-item tab-active tab-panel-item0">
+
+				</div>
+				<div class="tab-panel-item  tab-panel-item2">
+
+
+				</div>
+				<div class="tab-panel-item tab-panel-item1">
+
+				</div>
+			</div>
+		</div>
+		<div style="height:55px;"></div>
+		<input type="hidden" class="U_username" value="">
+
+	</section>
+</section>
+<div id="temps" style="display:none;">
+	<a href="javascript:void(0)" class="aui-flex b-line showMyitems"   style="min-height:100px;display:block;position:relative;" >
+		<div class="aui-flx-time">
+ 		<img src="{pic}" style="width:50px;">
+ 		<p style="line-height:24px;color:#333;">{name}</p>
+
+	 </div>
+		<h1 style="font-size:12px;color:#666666;position:absolute;right:10px;">{stime}</h1>
+	 <em href="javascript:;" style="position:absolute;right:10px ; font-style: normal;color:red;top:50px;z-index:1000;" onclick="delUidContent(this,{id},'boyun_home_quan_pl')">删除</em>
+	 <div class="aui-flex-box" style="position:relative">
+		 <h3>{content}</h3>
+	 </div>
+ </a>
+</div>
+</body>
+ <script type="text/javascript" src="./script/k_tab.js"></script>
+ <script type="text/javascript" src="./script/chart.js"></script>
+ <script type="text/javascript" src="/A6021579864710/static/js/1587545162408.js"></script>
+</html>
+
+

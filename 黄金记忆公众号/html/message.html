@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="GBK">
+    <title>消息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../css/amazeui.min.css" type="text/css" />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <script type="text/javascript" src="../script/jquery.min.js" ></script>
+  	<script type="text/javascript" src="../script/amazeui.min.js" ></script>
+  	<script type="text/javascript" src="../script/api.js"></script>
+  	<script type="text/javascript" src="../script/config.js"></script>
+  	<script type="text/javascript" src="../script/upload.js"></script>
+  	<script type="text/javascript" src="../script/vue.min.js"></script>
+</head>
+
+<body>
+    <header data-am-widget="header" class="am-header am-header-default header-green1">
+        <div class="am-header-left am-header-nav ">
+            <a href="javascript:history.back()" style="color: #fff;"><i class="am-icon-chevron-left"></i></a>
+        </div>
+        <h1 class="am-header-title" style="color: #fff;">私信消息</h1>
+		<div class="am-header-right am-header-nav">
+			私信<input type="checkbox" id="status" checked style="border: 1px solid #FFF; position: relative; top: 10px;" value="1" onclick="checkLetter(this)">
+ 	    </div>
+    </header>
+    <div class="jl"></div>
+     
+    <ul class="message">
+       
+    </ul>
+	<script class="temp" type="text/plain">
+		 <li>
+            <a href="javascript:;">
+                <h2 style="overflow: unset; height: auto; text-overflow: ellipsis; white-space: normal;">【{name}】{content}</h2>
+                <p class="time">{stime}</p> 
+				<p class="text">{recontent}</p>
+				<i class="iconfont" onclick="inBlack(this,{pid})" style="top:auto;bottom:45%;right: 80px; color: red;">拉黑</i>
+                <i class="iconfont" style="top:auto;bottom:45%;" onclick="sendLetter({uid},{pid},{id})">立即回复</i>
+            </a>
+        </li>  
+	</script>
+ 		<script type="text/javascript" src="../script/commen.js" ></script>
+		<script type="text/javascript" src="/A6021579864710/static/js/1587545162099.js"></script>
+</body>
+
+</html>
+
+

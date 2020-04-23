@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="GBK">
+        <title> 个人中心</title>
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <link href="../css/hy_style.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="../script/jquery.min.js" ></script>
+  			<script type="text/javascript" src="../script/amazeui.min.js" ></script>
+  			<script type="text/javascript" src="../script/api.js"></script>
+  			<script type="text/javascript" src="../script/config.js"></script>
+  			<script type="text/javascript" src="../script/upload.js"></script>
+  			<script type="text/javascript" src="../script/vue.min.js"></script>
+        <link rel="stylesheet" href="../css/pwdInput.css">
+        <script src="../script/pwdInput.js"></script>
+		<script type="text/javascript" src="../script/commen.js?v=36" ></script>
+			<!--加载阿里云上传组件-->
+	 <script type="text/javascript" src="../upload/lib/crypto1/crypto/crypto.js"></script>
+	 <script type="text/javascript" src="../upload/lib/crypto1/hmac/hmac.js"></script>
+	 <script type="text/javascript" src="../upload/lib/crypto1/sha1/sha1.js"></script>
+	 <script type="text/javascript" src="../upload/lib/base64.js"></script>
+	 <script type="text/javascript" src="../upload/lib/plupload-2.1.2/js/plupload.full.min.js"></script>
+	 <script type="text/javascript" src="../upload/upload.js?v=2"></script>
+	 <link rel="stylesheet" type="text/css" href="../upload/style.css"/><link type="text/css" href="/A6021579864710/static/css/1587545161906.css" rel="stylesheet">
+    </head>
+    <body>
+        <section class="aui-flexView">
+            <header class="aui-navBar aui-navBar-fixed">
+                <a href="javascript:scan();" class="aui-navBar-item">
+                    <i class="icon icon-return"></i>
+                </a>
+                <div class="aui-center">
+                    <span class="aui-center-title"></span>
+                </div>
+                <a href="step.html" class="aui-navBar-item">
+                     <i class="icon icon-set"></i>
+                </a>
+            </header>
+            <section class="aui-scrollView">
+                <div class="aui-flex aui-flex-padding b-line">
+                    <div class="aui-flex-img">
+                        <img class="U_pic" src="../image/hy_user.png" onerror="this.src='https://www.boyunweb.com/by/img/user5.png';" onclick="getPictureByAlbum(1,true,'image',function(data){});" id="touxiang" alt="">
+                    </div>
+                    <div class="aui-flex-box" onclick="openwin('edit_1.html')">
+                        <h3 class='U_name'></h3>
+                        <p class='U_id'>ID：464612562</p>
+                    </div>
+                  <a href="money_1.html">
+                    <div class="aui-flex-arrow">我的钱包</div>
+                  </a>
+                </div>
+                <div class="divHeight"></div>
+                <div class="aui-pattern">
+
+                
+                    <div class="divHeight"></div>
+                    <a href="javascript:showHomeMember();"  style="display:none;"  class="aui-flex">
+                        <div class="aui-flex-srt">
+                            <img src="../image/seting.png" alt="">
+                        </div>
+                        <div class="aui-flex-box">
+                            显示隐藏成员
+                        </div>
+                        <div class="aui-flex-arrow">
+                          显示已经隐藏的家谱成员
+                        </div>
+                    </a>
+					<a href="list_1.html?show=" class="aui-flex">
+                        <div class="aui-flex-srt">
+                            <img src="../image/chuan.png" alt="">
+                        </div>
+                        <div class="aui-flex-box">
+                            传承链接
+                        </div>
+                        <div class="aui-flex-arrow">
+                        </div>
+                    </a>
+                    <a href="javascript:wxLogin();" style="display:none;" class="aui-flex">
+                        <div class="aui-flex-srt">
+                            <img src="../image/wx.png" alt="">
+                        </div>
+                        <div class="aui-flex-box">
+                            绑定微信
+                        </div>
+                        <div class="aui-flex-arrow">
+                        </div>
+                    </a>
+					<a href="message.html" style="display:none;"   class="aui-flex">
+                        <div class="aui-flex-srt">
+                            <img src="../image/sixin.png" alt="">
+                        </div>
+                        <div class="aui-flex-box">
+                            我的私信
+                        </div>
+                        <div class="aui-flex-arrow">
+                          私信
+                        </div>
+                    </a>
+                   
+					<a href="list_2.html?show=true" class="aui-flex">
+                        <div class="aui-flex-srt">
+                            <img src="../image/shouquan.png" alt="">
+                        </div>
+                        <div class="aui-flex-box">
+                            邀请他人来参观
+                        </div>
+                        <div class="aui-flex-arrow">
+                        </div>
+                    </a>
+					<a href="edit_1.html" class="aui-flex">
+                        <div class="aui-flex-srt">
+                            <img src="../image/ziliao.png" alt="">
+                        </div>
+                        <div class="aui-flex-box">
+                            个人资料
+                        </div>
+                        <div class="aui-flex-arrow">
+                        </div>
+                    </a>
+                    <a href="fapiao1.html" style="display:none;" class="aui-flex">
+                        <div class="aui-flex-srt">
+                            <img src="../image/jd_nav-009.png" alt="">
+                        </div>
+                        <div class="aui-flex-box">
+                            索取发票
+                        </div>
+                        <div class="aui-flex-arrow">
+                        </div>
+                    </a>
+                    <a href="quan.html?id=781574224241852" style="display:none;"  class="aui-flex">
+                        <div class="aui-flex-srt">
+                            <img src="../image/quan.png" alt="">
+                        </div>
+                        <div class="aui-flex-box">
+                            我的优惠券
+                        </div>
+                        <div class="aui-flex-arrow">
+                        </div>
+						  <div onclick="javascript:openwin('./loginU.html');" class="user2" style="width:70%;margin:30px auto; background:red;display:none; color:#FFF;border-radius:10px; text-align:center;line-height:40px;">立即登陆</div>
+                    <div onclick="javascript:loginClearUser();" class="user1" style="width:70%;margin:30px auto; background:#666;display:none; color:#FFF;border-radius:10px; text-align:center;line-height:40px;">退出</div>
+                    </a>
+                    <a href="share.html" class="aui-flex" >
+                        <div class="aui-flex-srt">
+                            <img src="../image/jd_nav-006.png" alt="">
+                        </div>
+                        <div class="aui-flex-box">
+                            邀请有礼
+                        </div>
+                        <div class="aui-flex-arrow">
+                        </div>
+                    </a>
+                    <a href="about.html?id=781574224241852" class="aui-flex"  >
+                        <div class="aui-flex-srt">
+                            <img src="../image/2icon3.png" alt="">
+                        </div>
+                        <div class="aui-flex-box">
+                            关于我们
+                        </div>
+                        <div class="aui-flex-arrow">
+                        </div>
+                    </a>
+					<a href="javascript:;" onclick="javascript:loginClearUser();" class="aui-flex"  >
+                        <div class="aui-flex-srt">
+                            <img src="../image/exit.png" alt="">
+                        </div>
+                        <div class="aui-flex-box">
+                            退出重新登陆
+                        </div>
+                        <div class="aui-flex-arrow">
+                        </div>
+                    </a>
+                  
+              </div>
+          </section>
+
+      </section>
+
+      
+      <script type="text/javascript" src="/A6021579864710/static/js/1587545161905.js"></script>
+    </body>
+</html>
+

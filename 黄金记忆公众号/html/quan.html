@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="GBK">
+        <title>我的优惠券</title>
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <link href="../css/q_style.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="../script/jquery.min.js" ></script>
+  			<script type="text/javascript" src="../script/amazeui.min.js" ></script>
+  			<script type="text/javascript" src="../script/api.js"></script>
+  			<script type="text/javascript" src="../script/config.js"></script>
+  			<script type="text/javascript" src="../script/upload.js"></script>
+  			<script type="text/javascript" src="../script/vue.min.js"></script>
+        <script type="text/javascript" src="../script/q_tab.js"></script>
+        <link type="text/css" href="/A6021579864710/static/css/1587545162178.css" rel="stylesheet">
+    </head>
+    <body>
+
+
+
+        <section class="aui-flexView">
+            <header class="aui-navBar aui-navBar-fixed b-line">
+                <a href="javascript:history.back(-1);" class="aui-navBar-item">
+                    <i class="icon icon-return"></i>
+                </a>
+                <div class="aui-center">
+                    <span class="aui-center-title">我的优惠券</span>
+                </div>
+                <a href="javascript:;" class="aui-navBar-item">
+                    <i class="icon icon-sys"></i>
+                </a>
+            </header>
+            <section class="aui-scrollView">
+                <div class="aui-tab" data-ydui-tab>
+                    <ul class="tab-nav b-line">
+                        <li class="tab-nav-item tab-active" data="0" data-sql="TranOrderController_33">
+                            <a href="javascript: getLists();">
+                                <span>未使用</span>
+                            </a>
+                        </li>
+                        <li class="tab-nav-item"  data="3" data-sql="TranOrderController_35">
+                            <a href="javascript: getLists();">
+                                <span>已使用</span>
+                            </a>
+                        </li>
+                        <li class="tab-nav-item"  data="2" data-sql="TranOrderController_34">
+                            <a href="javascript: getLists();">
+                                <span>已过期</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-panel">
+                        <div class="tab-panel-item tab-active list0">
+                        </div>
+                        <div class="tab-panel-item tab-panel-item-clear list3">
+
+                        </div>
+                        <div class="tab-panel-item tab-panel-item-clear list2">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <div class="temp1" style="display:none;">
+          <a href="javascript:;" class="aui-flex">
+              <div class="aui-price-nub">
+                  <div class="aui-digit">
+                      <h2><em>￥</em>{price}</h2>
+                  </div>
+                  <div class="aui-full">
+                      <p>满{price}元可用</p>
+                  </div>
+              </div>
+              <div class="aui-flex-box">
+                  <h2>{name}</h2>
+                  <h3>{stime}~{etime}</h3>
+                  <button style="position:relative;top:20px;float: right;">{status}</button>
+              </div>
+          </a>
+        </div>
+         <script type="text/javascript" src="../script/commen.js" ></script>
+
+        <script type="text/javascript" src="/A6021579864710/static/js/1587545162177.js"></script>
+    </body>
+</html>
+

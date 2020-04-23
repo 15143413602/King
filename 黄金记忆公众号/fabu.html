@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="GBK">
+	<title>发布</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+	<meta content="telephone=no" name="format-detection"/>
+	<link rel="stylesheet" type="text/css" href="./css/f_base.css">
+	<link rel="stylesheet" type="text/css" href="./css/f_home.css">
+	<script type="text/javascript" src="./script/api.js"></script>
+	 <script type="text/javascript" src="./script/fp_jquery.min.js"></script>
+	 <script type="text/javascript" src="./script/commen.js?v=15"></script>
+	 <script type="text/javascript" src="./script/config.js"></script>
+	 <script type="text/javascript" src="./script/upload.js?v=17"></script>
+	 <script type="text/javascript" src="./script/vue.min.js"></script>
+	 <script src="./script/lCalendar.js"></script>
+	 <script type="text/javascript" src="./script/chart.js"></script>
+	 <link rel="stylesheet" href="./css/lCalendar.css">
+	 <!--加载阿里云上传组件-->
+	 <script type="text/javascript" src="./upload/lib/crypto1/crypto/crypto.js"></script>
+	 <script type="text/javascript" src="./upload/lib/crypto1/hmac/hmac.js"></script>
+	 <script type="text/javascript" src="./upload/lib/crypto1/sha1/sha1.js"></script>
+	 <script type="text/javascript" src="./upload/lib/base64.js"></script>
+	 <script type="text/javascript" src="./upload/lib/plupload-2.1.2/js/plupload.full.min.js"></script>
+	 <script type="text/javascript" src="./upload/upload.js?v=20"></script>
+	 <link rel="stylesheet" type="text/css" href="./upload/style.css"/>
+
+	 <link type="text/css" href="/A6021579864710/static/css/1587545161172.css" rel="stylesheet">
+</head>
+<body>
+<section class="aui-flexView">
+	<header class="aui-navBar aui-navBar-fixed">
+		<a href="javascript:history.back();" class="aui-navBar-item">
+			<i class="icon icon-return"></i>
+		</a>
+		<div class="aui-center">
+			<span class="aui-center-title">发布动态</span>
+		</div>
+		<a href="javascript:;" class="aui-navBar-item"></a>
+	</header>
+	<section class="aui-scrollView"><form id="loginForm">
+		<input type="hidden" name="uid" id="uid" class="U_id" value=""  >
+		<input type="hidden" name="tb_noform" id="tb_noform" value="boyun_home_quan"  >
+ 		<input type="hidden" name="video" id="video" value="" >
+		<input type="hidden" name="videopic" id="videopic" value="" >
+		<input type="hidden" name="stype" id="stype" value="0" >
+		<input type="hidden" name="stime" id="stime" value="" >
+		<input type="hidden" value="0"   name="passtime" id="passtime"  >
+		<input type="hidden" value="0"   name="isvideo" id="isvideo"  >
+		<input type="hidden" value="0"   name="userid" id="userid"  >
+		<input type="hidden" value="0"   name="ispublic" id="ispublic"  > 
+		<input type="hidden" value="0"   name="puid" id="puid"  > 
+		<textarea name="pics" id="pics" style="display:none;"></textarea>
+		<div class='aui-textarea-wrapper'>
+			<div class='textarea-block'>
+				<textarea class="textarea-item" name="content" id="content" placeholder="请输入内容 。"  spellcheck="false"></textarea>
+				<div class="aui-textarea-count">
+					<span class="textareaInput"></span> 
+				</div>
+			</div>
+		</div>
+		<div class="aui-title-main picflag" >
+			<h2>
+				附件上传 <em>最多上传100张图片</em>
+			</h2>
+		</div>
+		<div class="aui-upload-box picflag">
+			<div class="aui-upload-pic" id="aui-upload-pic"  style="float:left;width:100%;">
+				<span id="chose_pic_btn" style="" onclick="uploadHeadPic('aui-upload-pic','',false)">
+				</span>
+
+			</div>
+		</div>
+		<div class="aui-title-main videoflag">
+			<h2>
+				视频上传<em>最多上传1个</em></em>
+			</h2>
+		</div>
+		<div class="aui-upload-box videoflag">
+			<div class="aui-upload-pic" id="aui-upload-pic2"  style="float:left;width:100%;">
+				<span id="upload-video" style="" onclick="uploadHeadVideo('aui-upload-pic2','',false)">
+			 </span>
+			 </div>
+		</div>
+		<div class="aui-title-main qqqqq" style="background:#FFF; border-top:1px solid #f4f5f6">
+			<h2 class="quanxian">
+				权限 
+			</h2>
+		</div>
+		<div  class="aui-title-main" style="display:none;background:#FFF; border-top:1px solid #f4f5f6">
+ 				<h2>是否收费查看<select name="iscost" onchange="changeStatus(this)" id="iscost" class="form-control">
+					
+ 					 <option value="0">不收费</option>
+					 <option value="1">收费</option>
+					 
+ 				</select>
+				</h2>
+			</div>
+		<div class="aui-title-main" style="display:none;background:#FFF; border-top:1px solid #f4f5f6">
+			<h2>收费金额<input required="required" name="money" type="number" id="money" value="0" class="H_pass form-control" placeholder="收费金额">
+			</h2>
+		</div>
+		<div class="aui-title-main" style="background:#FFF; border-top:1px solid #f4f5f6">
+			<h2>
+				密码
+				<input type="number" name="pass" value="" nocheck="true" placeholder="设置保密密码">
+			</h2>
+		</div>
+		<div class="aui-title-main" style="background:#FFF; border-top:1px solid #f4f5f6">
+			<h2>
+				密码有效期
+				<input type="text"  id="yytime" value=""  nocheck="true" readonly="readonly" placeholder="密码为空不生效">
+			</h2>
+		</div>
+		<div class="aui-title-main" style="display:none; background:#FFF; border-top:1px solid #f4f5f6">
+			<h2>
+				通知人员设置
+				<input type="text" onclick="openwin('./html/list.html?show=true')" id="tongzhi" value=""  nocheck="true" readonly="readonly" placeholder="通知人员设置">
+			</h2>
+		</div>
+		
+		</form>
+		<div class="aui-title-main" style="height:10px;background:#FFFFFF;">
+		</div>
+		<div class="aui-main-button"  >
+			<button onclick="subTwoSaveData()" type="button" style="">提交</button>
+		</div>
+
+	</section>
+</section>
+</body>
+<script type="text/javascript" src="/A6021579864710/static/js/1587545161170.js"></script>
+</html>
+
+

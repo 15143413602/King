@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="GBK">
+	<title>公众分享设置</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<link href="./css/b_style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="./script/api.js"></script>
+	 <script type="text/javascript" src="./script/fp_jquery.min.js"></script>
+	 <script type="text/javascript" src="./script/commen.js?v=15"></script>
+	 <script type="text/javascript" src="./script/config.js"></script>
+	 <script type="text/javascript" src="./script/upload.js?v=6"></script>
+	 <script type="text/javascript" src="./script/vue.min.js"></script>
+	<!--加载阿里云上传组件-->
+	 <script type="text/javascript" src="./upload/lib/crypto1/crypto/crypto.js"></script>
+	 <script type="text/javascript" src="./upload/lib/crypto1/hmac/hmac.js"></script>
+	 <script type="text/javascript" src="./upload/lib/crypto1/sha1/sha1.js"></script>
+	 <script type="text/javascript" src="./upload/lib/base64.js"></script>
+	 <script type="text/javascript" src="./upload/lib/plupload-2.1.2/js/plupload.full.min.js"></script>
+	 <script type="text/javascript" src="./upload/upload.js?v=9"></script>
+	 <link rel="stylesheet" type="text/css" href="./upload/style.css"/>
+</head>
+<body>
+<section class="aui-flexView">
+	<header style="min-height:30px;"class="aui-navBar aui-navBar-fixed">
+		<a href="javascript:history.back();" class="aui-navBar-item">
+			<i class="icon icon-return"></i>返回
+		</a>
+		<div class="aui-center">
+			<span class="aui-center-title">公众分享设置</span>
+		</div>
+	</header>
+	<form id="loginForm">
+	<section class="aui-scrollView"> 
+		<input type="hidden" name="id" id="id"   value="0" >
+		<input type="hidden" name="ispublic" id="ispublic"   value="1" >
+	    <input type="hidden" name="iscost" id="iscost"   value="1" > 
+		<input type="hidden" name="tb_noform" value="boyun_home_quan" >
+ 		<div class="aui-link-list">
+			<div class="aui-form-group " style="margin-bottom:0">
+ 				<select name="wztype"   id="wztype" class="form-control">
+					 <option value="0">警法</option>
+ 					 <option value="1">经济</option>
+					 <option value="2">艺术</option>
+					 <option value="3">其他</option>
+ 				</select>
+				<label class="form-label">所属分类</label>
+			</div>
+			<div class="aui-form-group selectMoney " style="margin-bottom:0">
+ 				<select name="readtype" onchange="changeStatus(this)" id="readtype" class="form-control">
+					 <option value="0">打包收费</option>
+ 					 <option value="1">按字数收费</option> 
+ 				</select>
+				<label class="form-label">收费类型</label>
+			</div>
+			<div class="aui-form-group b-line selectMoney">
+				<input  type="number" required="required" name="showlen" id="showlen" class="H_showlen form-control" placeholder="请输入免费阅读字数">
+				<label class="form-label">请输入免费阅读字数</label>
+			</div>
+			<div class="aui-form-group b-line selectMoney">
+				<input type="number" required="required" name="money" id="money" class="  H_money form-control" placeholder="收费金额">
+				<label class="form-label shoufei" >收费金额</label>
+			</div>
+			<div class="aui-form-group " style="margin-bottom:0">
+ 				<select name="isreplace" onchange="changeReplace(this)" id="isreplace" class="form-control">
+					 <option value="0">不替换</option>
+ 					 <option value="1">替换</option> 
+ 				</select>
+				<label class="form-label">是否替换文中关键词</label>
+			</div>
+			<div class="aui-form-group b-line guanjianci" style="display:none;">
+				<input type="text" required="required" name="keyword" id="keyword" class="  H_keyword form-control" placeholder="请输入原关键多个请用“|”分开">
+				<label class="form-label " >请输入原关键</label>
+			</div> 
+			<div class="aui-form-group b-line guanjianci"  style="display:none;">
+				<input type="text" required="required" name="repkey" id="repkey" class="  H_repkey form-control" placeholder="请输入新关键词">
+				<label class="form-label " >请输入新关键词</label>
+			</div> 
+			 
+			<div class="divHeight"></div>
+		</div>
+
+	</section>
+</form>
+	<footer class="aui-footer aui-footer-fixed" style="position:relative;" >
+		<a href="javascript:;" onclick="saveData(function(){setTimeout(function(){winCloseFinish();},1000)});" class="aui-tabBar-item">
+			<span class="aui-tabBar-item-text">确定分享</span>
+		</a>
+	<script type="text/javascript" src="/A6021579864710/static/js/1587545162456.js"></script>
+</section>
+</body>
+</html>
+
+

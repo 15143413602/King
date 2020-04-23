@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>家通</title>
+<meta http-equiv="Content-Type" content="textml; charset=GBK">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="../css/amazeui.min.css" type="text/css" />
+<link rel="stylesheet" href="../css/style.css" type="text/css" />
+<link rel="stylesheet" href="../css/car.css" type="text/css" />
+<link href="../css/jd_style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../script/jquery.min.js" ></script>
+<script type="text/javascript" src="../script/amazeui.min.js" ></script>
+ <script src="../script/rl_zepto.mtimer.js"></script>
+ <script src="../script/lCalendar.js"></script>
+ <link rel="stylesheet" href="../css/lCalendar.css">
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/config.js"></script>
+<script type="text/javascript" src="../script/upload.js"></script>
+<script type="text/javascript" src="../script/vue.min.js"></script>
+<script type="text/javascript" src="../script/layer_mobile/layer.js"></script>
+ <link href="../css/b_fliter.css" rel="stylesheet" />
+<script src="../script/b_filter.js"></script>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=96485c2616cd32885ed9f1c184c14a4a&plugin=AMap.TruckDriving"></script>
+<link type="text/css" href="/A6021579864710/static/css/1587545161989.css" rel="stylesheet">
+
+</head>
+<body class="loading" style="max-width:650px; margin:0 auto;">
+  <header class="aui-navBar aui-navBar-fixed b-line" style="position: fixed; width: 100%;">
+    <a href="message_sys.html" class="aui-navBar-item">
+      <i class="icon icon-return"></i>
+    </a>
+    <div class="aui-center">
+      <span class="aui-center-title" style="font-size:14px">家通/货主端</span>
+    </div>
+    <a href="javascript:;" class="aui-navBar-item" onclick="scan()">
+      <i class="icon icon-code"></i>
+    </a>
+  </header>
+<form id="loginForm" method="post" style="margin-top:42px">
+  <input name="fhdz" type="hidden" value="">
+  <input name="fhrx" type="hidden" value=" ">
+  <input name="fhry" type="hidden" value=" ">
+  <input name="shrdz" type="hidden" value="">
+  <input name="shrx" type="hidden" value="0">
+  <input name="shry" type="hidden" value="0">
+  <input name="fhall" type="hidden" value=" ">
+  <input name="shall" id="shall" type="hidden" value=" ">
+  <input name="xdr" class="L_addr" type="hidden" value="0">
+  <input name="orderid" class="U_s_orderid" type="hidden" value=" ">
+  <input name="xdrsj" class="U_username" type="hidden" value=" ">
+  <input name="xuid" class="U_id" type="hidden" value="0">
+  <input name="xdrx" class="L_lat" type="hidden" value="0">
+  <input name="xdry" class="L_lon" type="hidden" value="0">
+  <input name="xdname" class="U_name" type="hidden" value="0">
+  <input name="jcfy" data="基础费用" type="hidden" value="0">
+  <input name="juli" data="距离" type="hidden" value="0">
+  <input name="xdsj" data="下单时间" type="hidden" value="0">
+  <input name="times" data="预计时间" type="hidden" value="0">
+  <input name="cartypename" data="车型名称" type="hidden" value="0">
+  <input name="othertext" data="其他属性" type="hidden" value="">
+  <input name="shrsjh" id="shrsjh"  type="hidden"    placeholder="收货电话" />
+  <textarea id="waypoint" name="waypoint" style="display:none"></textarea>
+  <input name="fhrsjh" id="fhrsjh"   type="hidden" maxlength="11" maxnum="11" oninput="splitInputValue(this,11)" placeholder="装货电话" />
+
+<div class="wrapper" style="overflow-y:scroll">
+   <div class="whole">
+    <div class="shangc WellForm" style="    border-bottom: 2px solid #CCC;overflow-y:scroll ">
+    </div>
+    <div style="" id="subform">
+       <ul class="yuyysj" style="margin: 1rem 0 0 1rem;">
+         <li onclick="qhtimes(this,1)" class="selecteds">现在</li>
+         <li onclick="qhtimes(this,2)">预约</li>
+       </ul>
+       <div class="content-block">
+          <i class="iconfont" style=" top:12px;color: #008b32;">&#xe601;</i>
+    			<input id="demo1" type="text"  readonly="" onclick="showMaps_JS('',0)"  placeholder="选择装货地址" />
+
+    		</div>
+
+
+       <div class="content-block  ">
+           <i class="iconfont" ><img src="../image/tianjia.png"></i>
+           <input name="fhrsjh" style="background:#FFF;text-align:left; " onclick="addAdresses(this)"   type="button" maxlength="11" maxnum="11"   value="添加收货地址" />
+       </div>
+
+			<div class="content-block "  style="display:none"  >
+           <i class="iconfont iconshijian" style=" color: #e06803;"><img src="../image/time.png"></i>
+
+ 					 <input  id="yytime" name="yytime" value="现在"  type="text" readonly="readonly"   placeholder="预约时间 默认现在" />
+      </div>
+
+      <div class="  WellForm    lvtong" style="  background: #FFF; margin: 1.4rem 3% 0 3%; width: 30%;  float: left; overflow: hidden; border-bottom: 1px solid #CCC;">
+        <label style="padding-left: 10px;">  <div class="WellRadio WellRadioH"><input type="checkbox" name="islt" value="1"></div><pre>绿通</pre></div></label>
+      </div>
+
+       <div class="content-block    lvtong" style="    width: 63%; float: left;" >
+           <i class="iconfont iconshijian" style=" color: #e06803;"><img src="../image/time.png"></i>
+           <input   type="number" onkeyup="if(this.value!='')$('#xs').val(parseInt(this.value)*60*60*1000)" style="text-align:center;"  oninput="splitInputValue(this,2)"  placeholder="绿通起止点限时 (小时)" />
+           <input type="hidden" id="xs" name="xs" type="number" value="0" maxlength="3" placeholder="绿通起止点限时 (小时)" />
+       </div>
+
+
+        <div class="content-block    lvtong" style="    width: 63%;   float: left;" >
+            <i class="iconfont iconshijian" style=" color: #e06803;"><img src="../image/xiaofei.png"></i>
+            <input   type="number" onkeyup="$('#xfmoney').val(this.value)" style="text-indent:2.5em;"  oninput="splitInputValue(this,4)"  placeholder="小费金额" />
+            <input type="hidden" id="xfmoney" name="xfmoney" type="number" value="0" maxlength="3" placeholder="小费（元）" />
+        </div>
+        <div class="  WellForm    lvtong" style=" background: #FFF;margin: 1.4rem 3% 0 3%; width: 30%;   float: left; overflow: hidden; border-bottom: 1px solid #CCC;">
+          <label>  <div class="WellRadio WellRadioH"><input type="checkbox" name="isby" value="1"></div><pre>搬运</pre></div></label>
+        </div>
+			<script type="text/javascript" src="/A6021579864710/static/js/1587545161987.js"></script>
+      <div class="content-block lvtong" style="float: left; width: 100%;">
+           <div class="  WellForm    lvtong" style="  background: #FFF; margin: 1.4rem 0 1.4rem 0%;  float: left; overflow: hidden; border-bottom: 1px solid #CCC;">
+            <label style="padding-left: 10px;">  <div class="WellRadio WellRadioH"><input type="radio" style="margin: 0 5px; width: 25px; height: 25px;"  checked name="payfs" value="0"></div><pre>发货时付款</pre>
+
+          </label>
+          </div>
+          <div class="  WellForm    lvtong" style="  background: #FFF; margin:  1.4rem 3% 1.4rem 0; width: 40%;  float: left; overflow: hidden; border-bottom: 1px solid #CCC;">
+            <label style="padding-left: 10px;">  <div class="WellRadio WellRadioH"><input type="radio" style="margin: 0 5px; width: 25px; height: 25px;"   name="payfs" value="1"></div><pre>收货时付款</pre>
+
+          </label></div>
+         </div>
+      <div class="content-block gongcheng" style="float: left; width: 100%;">
+          <i class="iconfont"  ><img src="../image/types.png"></i>
+          <input   readonly onclick="shoukuanjgtype(this)" id="jgtypeText" style="text-align:right" type="text" maxlength="11" maxnum="11"   value="排班收费/10小时 > " />
+          <input     name="jgtype" id="jgtype"  type="hidden"    value="1" />
+      </div>
+      <div class="content-block "  style="float: left; width: 100%;" >
+          <textarea id="hztext" name="hztext" style="margin:1%;padding:5px;border:1px solid #CCC;width:98%;height:80px" placeholder="请简单描述下你的货物信息"></textarea>
+      </div>
+      <div class="content-block" style="float: left; width: 100%;">
+         <input   type="button" value="立即下单" onclick="checkCarType()" style="background: #ff7a01; color: #FFF; font-size: 18px; text-indent: 0px;" />
+     </div>
+
+     <input  id="islt" name="islt"   type="hidden" value="0" readonly="readonly"   placeholder="用车类型 普货 绿通 工程" />
+     </div>
+   </div>
+ <div style="height:60px;"></div>
+</div>
+<!--搜索信息-->
+
+<!--筛选信息-->
+<div class="filterDiv">
+
+
+
+</div>
+<!--搜索信息-->
+</form>
+<div class="showMapSearch" style="top:0;left:0px;position:fixed;z-index:1000001">
+	<input id="searchMap" value=""   placeholder="搜索位置">
+  <a href="javascript:void(0)" onclick="closeAllSearchMap()" class="cancleSearVal">取消</a>
+  <div id="container" style="height:200px"></div>
+	<ul class="myArrList">
+
+	</ul>
+</div>
+<input type="hidden" value="承德" id="defKey">
+<script type="text/javascript" src="../script/commen.js" ></script>
+
+
+
+<script type="text/javascript" src="/A6021579864710/static/js/1587545161988.js"></script>
+</body>
+</html>
+
+
+

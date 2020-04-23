@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="GBK">
+	<title>添加家族成员</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<link href="./css/b_style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="./script/api.js"></script>
+	 <script type="text/javascript" src="./script/fp_jquery.min.js"></script>
+	 <script type="text/javascript" src="./script/commen.js?v=15"></script>
+	 <script type="text/javascript" src="./script/config.js"></script>
+	 <script type="text/javascript" src="./script/upload.js?v=6"></script>
+	 <script type="text/javascript" src="./script/vue.min.js"></script>
+	<!--加载阿里云上传组件-->
+	 <script type="text/javascript" src="./upload/lib/crypto1/crypto/crypto.js"></script>
+	 <script type="text/javascript" src="./upload/lib/crypto1/hmac/hmac.js"></script>
+	 <script type="text/javascript" src="./upload/lib/crypto1/sha1/sha1.js"></script>
+	 <script type="text/javascript" src="./upload/lib/base64.js"></script>
+	 <script type="text/javascript" src="./upload/lib/plupload-2.1.2/js/plupload.full.min.js"></script>
+	 <script type="text/javascript" src="./upload/upload.js?v=9"></script>
+	 <link rel="stylesheet" type="text/css" href="./upload/style.css"/>
+</head>
+<body>
+<section class="aui-flexView">
+	<header style="min-height:30px;"class="aui-navBar aui-navBar-fixed">
+		<a href="javascript:history.back();" class="aui-navBar-item">
+			<i class="icon icon-return"></i>返回
+		</a>
+		<div class="aui-center">
+			<span class="aui-center-title">添加成员</span>
+		</div>
+	</header>
+	<form id="loginForm">
+	<section class="aui-scrollView">
+		<input type="hidden" name="uid" id="uid" class="U_id" value=""  >
+		<input type="hidden" name="tb_noform" id="tb_noform" value="boyun_home"  >
+		<input type="hidden" name="pic" id="pic" class="H_pic" placeholder="请上传头像" value="" >
+ 		<input type="hidden" name="stime" id="stime" class="H_stime" value="" >
+		<input type="hidden" name="pid" id="pid"   value="0" >
+		<input type="hidden" name="position" id="position"   value="0" >
+ 		<div class="aui-link-list">
+			<div class="aui-form-group b-line">
+				<div class="aui-flex-box">
+					<h2>姓名</h2>
+					<input type="text" name="name"  id="name" placeholder="成员姓名" value="" class="H_name form-control">
+				</div>
+				<div>
+					<i class="icon  txl lefticn" onclick="openContact()"></i>
+				</div>
+			</div>
+			<div class="aui-form-group b-line">
+				<input required="required" name="bname" id="bname" class="H_bname form-control" placeholder="请输入关系">
+				<label class="form-label">关系</label>
+			</div>
+			<div class="aui-form-group b-line">
+ 				<div class="aui-flex-box">
+					<h2>电话<span style="font-size:12px;color:#666">&nbsp;没有电话可以输入11位数字，但是不能与对方建立联系</span></h2>
+					<input type="text" name="phone" id="phone" placeholder="请输入电话" value="" class="H_phone form-control">
+					<input type="hidden" name="col_noform" id="col_noform"   value="phone" class="  form-control">
+					<input type="hidden" name="uid_noform" id="uid_noform"   value="" class="U_id form-control">
+					<input type="hidden" name="reuse_noform" id="reuse_noform"   value="true" class="U_id form-control">
+				</div>
+				<div>
+					<i class="icon  txl lefticn" style="" onclick="openContact()"></i>
+				</div>
+			</div> 
+			<div class="aui-form-group " style="margin-bottom:0;display:none;">
+ 				<select name="bid" id="bid" class="form-control"></select>
+				<label class="form-label">辈分</label>
+			</div>
+			<div class="aui-form-group " style="display:none;margin-bottom:0">
+ 				<select name="status" onchange="changeStatus(this)" id="status" class=	"form-control">
+					<option value="0">不隐藏</option>
+				     <option value="1">隐藏</option> 
+ 				</select>
+				<label class="form-label">是否隐藏</label>
+			</div>
+			<div class="aui-form-group b-line" style="display:none;">
+				<input required="required" name="pass" value="123456" id="pass" class="H_pass form-control" placeholder="请输隐藏密码">
+				<label class="form-label">隐藏密码</label>
+			</div>
+			<div class="aui-form-group " style="display:none;margin-bottom:0">
+ 				<select name="isadd" id="isadd" class="form-control">
+ 					 <option value="0">不显示</option>
+					 <option value="1">显示</option>
+ 				</select>
+				<label class="form-label">是否在树上显示</label>
+			</div>
+			<div class="aui-form-group " style="margin-bottom:0">
+ 				<select   id="islink" class="form-control">
+ 					 <option value="0">马上联系</option>
+					 <option value="1">暂不联系</option>
+ 				</select>
+				<label class="form-label">是否联系</label>
+			</div>
+			<div class="divHeight"></div>
+			<div class="aui-flex b-line">
+				<div class="aui-flex-box" id="aui-upload-pic">
+					<h2>头像</h2>
+					<div id="chose_pic_btn">
+						<img src="./images/touxiang.png"  class="H_pic" style="width:60px" id="touxiang"  onclick="getPictureByAlbum(1,true,'picture',function(data){});">
+
+					</div>
+ 				</div>
+				<div>
+					<i class="icon icon-img"  onclick="getPictureByAlbum(1,true,'picture',function(data){});"></i>
+				</div>
+			</div>
+
+			<div class="divHeight"></div>
+		</div>
+
+	</section>
+</form>
+	<footer class="aui-footer aui-footer-fixed" style="position:relative;" >
+		<a href="javascript:;" onclick="contackUs();" class="aui-tabBar-item">
+			<span class="aui-tabBar-item-text">添加</span>
+		</a>
+	<script type="text/javascript" src="/A6021579864710/static/js/1587545161145.js"></script>
+</section>
+</body>
+</html>
+
+

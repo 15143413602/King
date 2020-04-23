@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="GBK">
+	<title>空间</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<link href="./css/k_style.css?v=2" rel="stylesheet" type="text/css" />
+	<link type="text/css" href="./css/full_screen_background_slider.css" rel="stylesheet" /> 
+ 	
+	 <script type="text/javascript" src="./script/api.js"></script>
+	 <script type="text/javascript" src="./script/fp_jquery.min.js"></script>
+	 <script type="text/javascript" src="./script/commen.js?v=36"></script>
+	 <script type="text/javascript" src="./script/config.js"></script>
+	 <script type="text/javascript" src="./script/upload.js?v=6"></script>
+	 <script type="text/javascript" src="./script/vue.min.js"></script>
+	 <script type="text/javascript" src="./js/p_modernizr.custom.js"></script>																									
+	 <script type="text/javascript" src="./js/p_fsbs.min.js"></script>
+	 <link rel="stylesheet" href="./css/pwdInput.css">
+	 <script src="./script/pwdInput.js"></script>
+ <!--加载阿里云上传组件-->
+	 <script type="text/javascript" src="./upload/lib/crypto1/crypto/crypto.js"></script>
+	 <script type="text/javascript" src="./upload/lib/crypto1/hmac/hmac.js"></script>
+	 <script type="text/javascript" src="./upload/lib/crypto1/sha1/sha1.js"></script>
+	 <script type="text/javascript" src="./upload/lib/base64.js"></script>
+	 <script type="text/javascript" src="./upload/lib/plupload-2.1.2/js/plupload.full.min.js"></script>
+	 <script type="text/javascript" src="./upload/upload.js?v=6"></script>
+	 <link rel="stylesheet" type="text/css" href="./upload/style.css"/>
+
+	<link type="text/css" href="/A6021579864710/static/css/1587545162402.css" rel="stylesheet">
+</head>
+<body  >
+<section class="aui-flexView">
+
+	<section class="aui-scrollView"> 
+			<header class="aui-navBar aui-navBar-fixed aui-head-box2"  >
+				 
+				<div class="aui-center">
+					<span class="aui-center-title" style="  font-size: 1.2rem;">我的空间</span>
+				</div>
+ 
+			</header>
+			 
+		</div>
+		<div class="aui-head-box  aui-head-box1 ">
+			<header class="aui-navBar aui-navBar-fixed" style="    top: 18px;position: absolute; width: 100%; display: flex; z-index: 102; background: transparent; color: #FFF;">
+				<a href="javascript:history.back();" class="aui-navBar-item">
+						<i class="icon icon-return" style="background:url('./image/back.png');background-size: 100%;"></i>
+				</a>
+				<div class="aui-center">
+					<span class="aui-center-title" style="color: #FFF; font-size: 1.2rem;">我的空间</span>
+				</div>
+
+				<a href="javascript:;" id="quanmenu" onclick1="openwin('quan_1.html')" class="aui-navBar-item" style="overflow: unset;">
+						<i class="icon icon-return" style="background:url('./image/xinjian.png');background-size: 100%;"></i>
+				</a>
+			</header>
+			<div class="aui-user-img">
+				<img src="./images/t_default.jpg" onerror="this.src='./image/phone.png';"  id="touxiang" onclick="getPictureByAlbum(1,true,'image',function(data){});" style="border-radius:50%;height:80px" alt="" class="M_pic">
+			</div>
+			<div class="aui-user-name">
+				<h2><i class="M_name">--</i> <img src="./images/k_vip.png" alt="" >  <em style="font-size:12px;">普通会员</em></h2>
+			</div>
+
+			<a href="javascript:;" class="myeye" style="position:absolute;right:20px;bottom:30%;min-width:auto;" onclick="hideUser()">
+					<i class="icon icon-return" style="background:url('./image/eye.png')  no-repeat;background-size: 100%;width:30px ;height:30px;"></i>
+			</a>
+			<div class="aui-user-text">
+				<span onclick="openAbout()"><em class=" ">人物介绍</em></span>
+				<span style="display:none;">今日访客 <em class="M_jkread">0</em></span>
+				<span style="display:none;">总量 <em class="M_akread">0</em></span>
+			</div>
+			<img src="./images/k_head.png" alt="">
+		</div>
+
+		<div class="aui-tab " data-ydui-tab>
+			<div class="b-line aui-head-box1 shoumoooom">
+				<ul class="tab-nav">
+					<li class="tab-nav-item tab-active " style="width:49.99%">
+						<a href="javascript:;" onclick="changeLoadList(0)">
+							<span>亲人记忆</span>
+						</a>
+					</li>
+					<li class="tab-nav-item" style="display:none;">
+						<a href="javascript:;" onclick="changeLoadList(2)">
+							<span>视频</span>
+						</a>
+					</li>
+					<li class="tab-nav-item " style="display:none;">
+						<a href="javascript:;" onclick="changeLoadList(1)">
+							<span>相册</span>
+						</a>
+					</li>
+					<li class="tab-nav-item" style="width:49.99%">
+						<a href="javascript:;" onclick="">
+							<span>亲人心意</span>
+						</a>
+					</li>
+				</ul>
+			</div> 
+			<div class="b-line aui-head-box2">
+				<ul class="tab-nav">
+					<li class="tab-nav-item tab-active">
+						<a href="javascript:;" onclick="changeLoadList(3)">
+							<span>警法</span>
+						</a>
+					</li>
+					<li class="tab-nav-item">
+						<a href="javascript:;" onclick="changeLoadList(4)">
+							<span>经济</span>
+						</a>
+					</li>
+					<li class="tab-nav-item">
+						<a href="javascript:;" onclick="changeLoadList(5)">
+							<span>艺术</span>
+						</a>
+					</li>
+					<li class="tab-nav-item">
+						<a href="javascript:;" onclick="changeLoadList(6)">
+							<span>其他</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="tab-panel">
+				<div class="tab-panel-item  tab-panel-item0">
+
+				</div>
+				<div class="tab-panel-item  tab-panel-item2">
+
+
+				</div>
+				<div class="tab-panel-item tab-active tab-panel-item1">
+
+				</div>
+				<div class="tab-panel-item  ">
+
+				</div>
+				<div class="tab-panel-item tab-panel-item3">
+
+				</div>
+				<div class="tab-panel-item tab-panel-item4">
+
+				</div>
+				<div class="tab-panel-item tab-panel-item5">
+
+				</div>
+				<div class="tab-panel-item tab-panel-item6">
+
+				</div>
+			</div>
+		</div>
+		<div style="height:55px;"></div>
+		<input type="hidden" class="U_username" value="">
+
+	</section>
+</section>
+<div id="temps" style="display:none;">
+	<a href="javascript:void(0)" class="aui-flex b-line classhow{uid}"   style="display:block;position:relative;" >
+	 <div class="aui-flx-time">
+		 <h1>{stime_date}</h1>
+		 <p>{stime_time}</p>
+	 </div>
+
+	 
+	 <div class="aui-flex-box" style="position:relative">
+		 <div  style="{passhide}background-color:#000000;height:100%;width:100%;position:absolute;z-index:1000;filter:alpha(Opacity=95);-moz-opacity:0.95;opacity: 0.95;background-image:url(./image/suo.png);background-repeat: no-repeat;background-position: center;color:#FFFFFF;background-size:30px;text-align:center;line-height:90px;" onclick="onshowClick(this,'{pass}')"><br/>解锁</div>
+		 <h3  style="white-space: normal;">{content_1}</h3>
+		 <h3 style="white-space: normal;display:none" data-value="{keyword}" class="showid{id}">{content}</h3>
+		 {pics}<div class="video{isvideo}" style="position:relative;width:40%" onclick="playVideos('{video}')"><img src="./image/play_video.png" style="width:30px;position:absolute;top:45%;left:45%;z-index:100"><img src="{video}?spm=a2c4g.11186623.2.1.yjOb8V&x-oss-process=video/snapshot,t_7000,f_jpg,w_800,h_600,m_fast"></div>
+		 <span class="tbiaos  mmdd pinglun" onclick = "showChartInput(false,false,'{id}',false,{uid})">
+			 留言&nbsp; <font class="pcount{id}">{pcount}</font>
+		 </span>
+		 <span  class="tbiaos" onclick="showChartInput(true,false,'{id}',false,{uid})">
+			 礼物&nbsp; <font class="gcount{id}">{gcount}</font>
+		 </span>
+		
+		 <span  class="tbiaos" onclick="addClickCount({id},'boyun_home_quan','zcount','quan','.zcount{id}')"> 点赞&nbsp;<font class="zcount{id}">{zcount}</font></span>
+		 <span  class="tbiaos qx{qx} mmdd" onclick="showShare({id})" >分享&nbsp;<font class="fcount{id}">{fcount}</font></span>
+		 <span  class="tbiaos qx{qx} mmdd" style="color:red" onclick="delUidContent(this,{id},'boyun_home_quan')" >删除 
+		 </span>
+		 
+		  <span  class="tbiaos showpublic" style="display:none" onclick="sendLetter( {uid})">
+			 私信 
+		 </span>
+	 </div>
+ </a>
+</div>
+<ul class="fsb-slider" style="position:fixed;top:0px;left:0px;display:none;z-index:100001;background:#000;"> 
+</ul>
+<div class="m-actionsheet" id="actionSheet">
+	<div class="aui-show-box">
+		<div class="aui-show-box-title aui-footer-flex">
+			<div class="b-line aui-coll-share-box">
+				 
+				<a href="javascript:;" onclick="shareMyFriend()" class="aui-coll-share-item">
+					<div class="aui-coll-share-img">
+						<img src="./images/k_icon-pyq.png" alt="">
+					</div>
+					<div class="aui-coll-share-text">分享给好友</div>
+				</a> 
+				<a href="javascript:;" onclick="sharepublicSpace()" class="aui-coll-share-item">
+					<div class="aui-coll-share-img">
+						<img src="./images/k_icon-kj.png" alt="">
+					</div>
+					<div class="aui-coll-share-text">分享到公众圈</div>
+				</a>
+				<a href="javascript:;" onclick="shareMySpace()" class="aui-coll-share-item">
+					<div class="aui-coll-share-img">
+						<img src="./images/xc_name.png" alt="">
+					</div>
+					<div class="aui-coll-share-text">分享到后台</div>
+				</a>
+			 
+			</div>
+			<div class="aui-coll-cancel">
+				<a href="javascript:;" id="cancel" class="">取消
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+ <script type="text/javascript" src="./script/k_tab.js"></script>
+ <script type="text/javascript" src="./script/chart.js?v=5"></script>
+  <script type="text/javascript" src="/A6021579864710/static/js/1587545162400.js"></script>
+</html>
+
+

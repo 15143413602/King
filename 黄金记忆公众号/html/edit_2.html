@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GBK">
+		<title>家</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="../css/amazeui.min.css" type="text/css" />
+		<link rel="stylesheet" href="../css/style.css" type="text/css" />
+		<script type="text/javascript" src="../script/jquery.min.js" ></script>
+		<script type="text/javascript" src="../script/amazeui.min.js" ></script>
+		<script type="text/javascript" src="../script/api.js"></script>
+		<script type="text/javascript" src="../script/config.js"></script>
+		<script type="text/javascript" src="../script/upload.js"></script>
+		<script type="text/javascript" src="../script/vue.min.js"></script>
+	</head>
+	<body>
+		<header data-am-widget="header" class="am-header am-header-default header-green1">
+	      <div class="am-header-left am-header-nav ">
+		        <a href="javascript:history.back()" style="color: #fff;"><i class="am-icon-chevron-left"></i></a>
+	        </div>
+		  <h1 class="am-header-title" style="color: #fff;">资料车辆信息</h1>
+        </header>
+        <div class="jl"></div>
+
+       <div style="height: 1rem; background: #E8E8E8;"></div>
+        <div class="advantage">
+        <form    id="loginForm" action=""   method="POST">
+        	<ul class="reg-infor">
+						<input type="hidden" placeholder="必填 姓名"   name="id" class="bt U_id" />
+						<li>
+	            <em>*</em><span>车牌号码 ：</span>
+	            <i class="am-icon-angle-right"></i>
+
+	            <input type="text" placeholder="必填 车牌号码" class="bt U_carnum"  name="carnum" oninput="splitInputValue(this,8)"/>
+	          </li>
+	          <li>
+	            <em>*</em><span>车辆类别 ：</span>
+	 						<select name="cartype"  placeholder="必填 车辆类别"  class="bt selected  xiala  U_cartype" >
+								<option value="0">选择车型</option>
+							</select>
+	           </li>
+	          <li>
+	            <em>*</em><span>行驶证归属 ：</span>
+	            <i class="am-icon-angle-right"></i>
+	              <input type="text" placeholder="必填 行驶证所属人姓名" name="carbelong" class="bt U_carbelong" oninput="splitInputValue(this,4)" />
+	              <input type="hidden" placeholder="用户类型" name="type" value="1" class="bt U_type" />
+	              <input type="hidden" placeholder="用户类型" name="status" value="1" class="bt U_status"  />
+	          </li>
+					<ul class="uploads">
+						<li>
+								<img  class="U_jszpic" src="../image/jsz.png" onclick="uploadHeadPic('jszpic',1,this)"/>
+								<p>驾驶证照片</p>
+								<input type="hidden" class="U_jszpic"   placeholder="必填 驾驶证照片" value="" name="jszpic" id="jszpic"/>
+						</li>
+						<li>
+								<img class="U_xszpic"  src="../image/xsz.png" onclick="uploadHeadPic('xszpic',1,this)"/>
+								<p>行驶证照片</p></p>
+								<input class="U_xszpic"  type="hidden"  placeholder="必填 行驶证照片" value="" name="xszpic" id="xszpic"/>
+						</li>
+						<li>
+								<img class="U_clpic"  src="../image/cl.png"  onclick="uploadHeadPic('clpic',1,this)"/>
+								<p>车辆45度角照片</p>
+								<input class="U_clpic"  type="hidden"  placeholder="必填 车辆45度角照片" value="" name="clpic" id="clpic"/>
+						</li>
+						<li>
+							 <img class="U_fppic"  src="../image/fp.png" onclick="uploadHeadPic('fppic',1,this)"/>
+								<p>绿色车辆购买发票</p>
+								<input class="U_fppic"  type="hidden"  value="" name="fppic" id="fppic" norequest/>
+						</li>
+
+        	</ul>
+          <button class="save" type="button" onclick="updateUserInfo(function(){winCloseFinish();});">保存核审</button>
+        </form>
+        </div>
+        <div class="jl"></div>
+
+
+
+		<script type="text/javascript" src="../script/commen.js" ></script>
+		<script type="text/javascript" src="/A6021579864710/static/js/1587545161827.js"></script>
+	</body>
+</html>
+
+

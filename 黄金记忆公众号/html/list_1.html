@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="GBK">
+        <title>人员选择</title>
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <link href="../css/by_style.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="../script/api.js"></script>
+      	 <script type="text/javascript" src="../script/fp_jquery.min.js"></script>
+      	 <script type="text/javascript" src="../script/commen.js?v=10"></script>
+      	 <script type="text/javascript" src="../script/config.js"></script>
+      	 <script type="text/javascript" src="../script/upload.js"></script>
+      	 <script type="text/javascript" src="../script/vue.min.js"></script>
+         <script type="text/javascript" src="../script/layer_mobile/layer.js"></script>
+
+		<script type="text/javascript" src="/A6021579864710/static/js/1587545162053.js"></script>
+        <link type="text/css" href="/A6021579864710/static/css/1587545162056.css" rel="stylesheet">
+    </head>
+    <body>
+        <section class="aui-flexView">
+            <section class="aui-scrollView">
+                <div class="aui-friends-head" style="position:relative">
+                    <h2>人员选择</h2><a href="../add.html" class="addlist" style="  color: #FFF; padding: 2px 10px; position: absolute; right: 0; top: 11px; border-radius: 10px;">
+                    <img src="../images/add.png"  style="width:20px"></a>
+                    <button class="noedit queaddlist" onclick="closeHome1();" style="background: #FFF; border: 0px; padding: 4px; position: absolute; right: 0px; top: 8px;" >确定</button>
+                </div>
+        				<div class="searchP"><input id="searchMyContact"
+                   style="width: 94%; margin: 2px 3%; height: 40px; border-radius: 4px; border: 1px solid #CCC; text-indent: 2em; background: url(../images/search.png) no-repeat left; background-size: 30px;" type="text" value="" placeholder="搜索电话/联系人"></div>
+        				<div id="letter" ></div>
+                <div class="sort_box aui-friends-list aui-friends-list1" style="margin-bottom: 80px;">
+                </div>
+            </section>
+        </section>
+		<script type="text/plain" class="hongjiutemp">
+		 <div href="" class="sort_list aui-flex home{bid}_{position}" data="{id}" data-name="{name}" data-isadd="{isadd}" >
+				<div class="aui-flex-img num_logo" onclick="showCloseImg(this)" data="{id}">
+					<img src="{pic}" alt="" data="{pic}" class="" onerror="this.src='../images/by_icon-tx-003.png'">
+				</div>
+				<a href="../quan.html?userid={pid}&id={id}&qx={qx}" class="aui-flex-box edit"> 
+					<h2 class="num_name">{name}</h2>
+					<h3>{phone}</h3>
+				 </a>
+				<a href="javascript:void(0);" class="aui-flex-box noedit"> 
+ 					<h2 class="num_name">{name}</h2>
+ 					<h3>{phone}</h3>
+ 				 </a>
+				<div class="aui-flex-button">
+					<a href="tel:{phone}"  class="edit"><img src="../images/mobile.png"></a>
+					<a style="display:none" href="$TEM-WURL/565.jsp?id={id}"><img src="../images/by_icon__qun-chat.png"></a>
+					<a  href="../add.html?id={id}" class="edit"><img src="../images/edit.png"></a>
+					<a   href="javascript:;"  class="edit"onclick="isUpTree({bid},{id},{position})"><img src="../image/shang.png"></a>
+          <label style="float:right;" class="noedit">  <div class="WellRadio WellRadioH"><input  type="radio" data="{id}" name="jialist" value="{id}"></div>   </label>
+				</div>
+			</div>
+		 </script> 
+		<div class="initials">
+			<ul>
+			</ul>
+		</div>
+        <script type="text/javascript" src="../script/by_jquery.charfirst.pinyin.js"></script>
+        <script type="text/javascript" src="/A6021579864710/static/js/1587545162054.js"></script>
+        <script type="text/javascript" src="../script/txl_list.js?v=2"></script>
+        <script type="text/javascript" src="/A6021579864710/static/js/1587545162055.js"></script>
+       </body>
+</html>

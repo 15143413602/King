@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="GBK">
+	<title>分类选择</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+	<meta content="telephone=no" name="format-detection"/>
+	<link href="../css/fl_style.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="../script/jquery.min.js" ></script>
+	<script type="text/javascript" src="../script/amazeui.min.js" ></script>
+	<script type="text/javascript" src="../script/api.js"></script>
+	<script type="text/javascript" src="../script/config.js"></script>
+	<script type="text/javascript" src="../script/upload.js"></script>
+	<script type="text/javascript" src="../script/vue.min.js"></script>
+
+</head>
+<body>
+<section class="aui-flexView">
+	<header class="aui-navBar aui-navBar-fixed" style="border-bottom:1px solid #CCC;">
+		<a href="javascript:history.back(-1);" class="aui-navBar-item">
+
+		</a>
+		<div class="aui-center">
+			<span class="aui-center-title ">货源</span>
+		</div>
+		<a href="javascript:;" class="aui-navBar-item"
+		   data-ydui-actionsheet="{target:'#actionSheet',closeElement:'#cancel'}">
+			<i class="icon icon-sys"></i>
+		</a>
+	</header>
+	<section class="aui-scrollView">
+		<div class="aui-flex aui-flex-screen b-line">
+			<div class="aui-flex-box">
+				<h2 num='0' index='0' class="val1 L_city" onclick="selectCity(this,function(obj,data){$(obj).html(data.city+'<i class=\'icon icon-dow\'></i>');})">承德</h2> <!-- 上箭头追加class icon-up-->
+
+			</div>
+			<div class="aui-flex-box">
+				<h2 num='1' style="text-align:center" class="val2" onclick="selectCity(this,function(obj,data){$(obj).html(data.city+'<i class=\'icon icon-dow\'></i>');})">目的地<i class="icon icon-dow"></i></h2>
+
+			</div>
+			<div class="aui-flex-box">
+				<h2 num='2' style="text-align:right" >筛选<i class="icon icon-dow"></i></h2>
+				<ul style="display:none" class="val3" >
+					<li data=" and islt=1">绿通</li>
+					<li data=" and islt=0">普货</li>
+					<li data=" and islt=2">工程</li>
+				</ul>
+			</div>
+		</div>
+		<div class="aui-mask"  style="display:none"></div>
+		<div class="aui-for-list">
+
+		</div>
+
+	</section>
+</section>
+<div class="temp" style="display:none;">
+
+	<a href="huo-detail.html?id={id}" class="aui-flex b-line">
+		<div class="aui-for-img" style="position:relative;top:-1em;">
+			<img src="../image/fl_fl-001.png" alt="" >
+		</div>
+		<div style="color:#FFF;position:absolute;padding:2px 4px;top:4rem;;right:10px;border:1px solid #CCC; font-size:12px;    border-radius: 50%;">
+			<img src="../image/mobile.png" style="width:28px;">
+		</div>
+		<div style="font-size:12px;color:#CCC;position:absolute;right:10px;top:1rem;">{xdsj}</div>
+		<div  style="font-size:12px;color:#CCC;position:absolute;right:10px;top:2.8rem;">约{distance}km装货</div>
+		<div class="aui-flex-box">
+			<h2 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 80%;">{fhdz}->{shrdz}</h2>
+			<p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 90%;">{othertext}</p>
+			<p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 90%;">{hztext}</p>
+		  <p><img src="../image/huiyuan.png" style="position:relative;top:3px;padding-right:10px;width:auto;height:16px;float:left">{xdname},预计运费：{jcfy}元</p>
+
+		</div>
+
+	</a>
+</div>
+</body>
+
+<script type="text/javascript" src="../script/commen.js" ></script>
+
+<script type="text/javascript" src="/A6021579864710/static/js/1587545161876.js"></script>
+</html>
+
+

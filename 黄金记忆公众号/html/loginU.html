@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GBK" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="../css/amazeui.min.css" type="text/css" />
+		<link rel="stylesheet" href="../css/style.css" type="text/css" />
+		<script type="text/javascript" src="../script/jquery.min.js" ></script>
+		<script type="text/javascript" src="../script/amazeui.min.js" ></script>
+		<script type="text/javascript" src="../script/api.js"></script>
+		<script type="text/javascript" src="../script/config.js"></script>
+		<script type="text/javascript" src="../script/upload.js"></script>
+		<script type="text/javascript" src="../script/vue.min.js"></script>
+	</head>
+	<body class="bgcolor">
+			<header id="header" class="am-header am-header-default header-white" style="display:none;">
+			</header>
+		<header data-am-widget="header" class="am-header am-header-default header-white">
+	      <div class="am-header-left am-header-nav">
+		     <a href="javascript:history.back()" class=""><i class="am-icon-chevron-left"></i></a>
+	      </div>
+	      <h1 class="am-header-title">登陆</h1>
+        </header>
+				<form    id="loginForm" action="" onsubmit="return formsubmit(this)" method="POST"> 
+
+        <div class="jl"></div>
+        <input type="number" name="username" id="username" value="" placeholder="请输入手机号" class="login-name mt20">
+
+	    	  <input type="password" name="password" id="password"  value="" placeholder="密码" class="login-name mt20">
+ 	    <input type="button" class="login-btn" value="登录" onclick="loginUser(function(){});">
+	       <p class="login-text">
+                          没有账号？点此<a href="reg.html" class="reg">注册</a>
+          <a href="forget.html?v=2" class="password">忘记密码</a>
+        </p>
+			</form>
+			<script type="text/javascript" src="../script/commen.js" ></script>
+			<script type="text/javascript" src="/A6021579864710/static/js/1587545162074.js"></script>
+
+	</body>
+</html>
+

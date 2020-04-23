@@ -1,0 +1,5 @@
+
+				callBackInit = function(){
+				    	readCach(".showcl");
+				}
+				

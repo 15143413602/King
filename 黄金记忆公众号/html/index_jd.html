@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="GBK">
+	<title>家APP</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<link href="../css/jd_style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="../script/jquery.min.js" ></script>
+	<script type="text/javascript" src="../script/amazeui.min.js" ></script>
+	<script type="text/javascript" src="../script/api.js"></script>
+	<script type="text/javascript" src="../script/config.js"></script>
+	<script type="text/javascript" src="../script/upload.js"></script>
+	<script type="text/javascript" src="../script/vue.min.js"></script>
+	<link type="text/css" href="/A6021579864710/static/css/1587545162020.css" rel="stylesheet">
+</head>
+<body>
+<section class="aui-flexView">
+	<header class="aui-navBar aui-navBar-fixed b-line">
+		<a href="message_sys.html" class="aui-navBar-item">
+			<i class="icon icon-return"></i>
+		</a>
+		<div class="aui-center">
+			<span class="aui-center-title">主端</span>
+		</div>
+		<a href="javascript:;" class="aui-navBar-item" onclick="scan()">
+			<i class="icon icon-code"></i>
+		</a>
+	</header>
+	<section class="aui-scrollView">
+	<div class="aui-flex-item">
+			<div class="aui-flex " id ="U_rabstatus">
+
+			</div>
+			<div class="aui-palace aui-palace-two" style="display:none;">
+				<a href="javascript:void(0)" class="aui-palace-grid">
+					<div class="aui-palace-grid-text">
+						<h1  id="U_goods">{goods}<em></em> </h1>
+						<h2>好评</h2>
+					</div>
+				</a>
+				<a href="javascript:void(0)" class="aui-palace-grid">
+					<div class="aui-palace-grid-text">
+						<h1  id="U_bads">{bads}<em> </em> </h1>
+						<h2>差评</h2>
+					</div>
+				</a>
+				<a href="javascript:void(0)" class="aui-palace-grid info">
+					<div class="aui-palace-grid-text">
+						<h1 id="U_hcount">{hcount}<em></em> </h1>
+						<h2>成单数量</h2>
+					</div>
+				</a>
+				<a href="javascript:void(0)" class="aui-palace-grid info">
+					<div class="aui-palace-grid-text">
+						<h1 id="U_stuid">{stuid}<em></em> </h1>
+						<h2 id="mrjdms">每天拒单-禁止接单</h2>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="b-line"></div>
+		<!--订单列表-->
+		<div class="orderList"></div>
+	</section>
+
+</section>
+<input id="carx" class="L_lat" type="hidden" value="0">
+<input id="cary" class="L_lon" type="hidden" value="0">
+<input type="hidden" data="发货付款,收货付款" class="payfs_">
+<input id="carsjh" class="U_username" type="hidden" value=" ">
+<input id="carname" class="U_name" type="hidden" value=" ">
+ <script type="text/javascript" src="../script/jd_slider.js"></script>
+
+<script type="text/javascript" src="../script/commen.js" ></script>
+<script type="text/javascript" src="/A6021579864710/static/js/1587545162019.js"></script>
+</body>
+</html>
+
+
+

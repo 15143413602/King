@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="GBK">
+        <title>消息</title>
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <link href="./css/m_style.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="./script/api.js"></script>
+        <script type="text/javascript" src="./script/fp_jquery.min.js"></script>
+        <script type="text/javascript" src="./script/commen.js?v=36"></script>
+        <script type="text/javascript" src="./script/config.js"></script>
+        <script type="text/javascript" src="./script/upload.js"></script>
+        <script type="text/javascript" src="./script/vue.min.js"></script>
+        <script type="text/javascript" src="./script/layer_mobile/layer.js"></script>
+		<link type="text/css" href="/A6021579864710/static/css/1587545162387.css" rel="stylesheet">
+    </head>
+    <body>
+        <section class="aui-flexView " style="padding-bottom:80px;">
+            <header class="aui-navBar aui-navBar-fixed">
+                <div class="aui-center">
+                    <span class="aui-center-title">消息</span>
+                </div>
+            </header>
+            <section class="aui-scrollView">
+                <div class="aui-news-box">
+					<a href="./html/message.html" class="aui-news-item" data-status="已读" data-type="1" data-id="81" data-phone="13131433707" style="    min-height: 110px;position:relative;padding-top: 5px; padding-bottom: 4px;">
+				  <div class="aui-news-item-hd">
+					  <img src="./image/chuan.png" alt="">
+				  </div>
+				  <div class="aui-news-item-bd">
+					  <h4>私信</h4>
+					  <p onclick="queConform(this,0)"> 查看我的私人信件</p>
+				  </div>
+ 				   </a>
+
+
+                </div>
+            </section>
+        </section>
+        <h4 class="types_"  style="display:none;" data="消息通知,权限申请,连接申请"> </h4>
+        <h4 class="status_"  style="display:none;" data="未读,已读"> </h4>
+        <script class="temp" type="text/plain">
+
+          <a href="javascript:;" class="aui-news-item" data-status="{status}"   data-type="{types_val}" data-id="{id}" data-phone="{username}" style="    min-height: 110px;position:relative;padding-top: 5px; padding-bottom: 34px;">
+              <div class="aui-news-item-hd">
+                  <img src="./images/m_icon-item-003.png" alt="">
+              </div>
+              <div class="aui-news-item-bd">
+                  <h4   >{types}</h4>
+                  <p onclick="queConform(this,0)">{content}</p>
+              </div>
+              <span class="aui-news-item-fr">{stime}</span>
+ 			  <div class="showButton status{status_val}" style="position:absolute;bottom:2px;right:10px;">
+			  <span class="hides1  " style="background:red;color:#FFF" href="javascript:;"  data-status="{status_val}" onclick="queConform(this,1)"  data-type="{types_val}" data-fid="{fid}" data-id="{id}" data-phone="{username}" >同意连接</span> 
+			  <span  class="hides1 " href="javascript:;"  data-fid="{fid}" data-status="{status_val}" onclick="queConform(this,2)"  data-type="{types_val}" data-id="{id}" data-phone="{username}"  >不链接</span>
+			  <span  class="hides2  " style="background:red;color:#FFF"  data-fid="{fid}" href="javascript:;"  data-status="{status_val}" onclick="queConform(this,3)"  data-type="{types_val}" data-id="{id}" data-phone="{username}" >同意</span> 
+			  <span  class="hides2  " href="javascript:;"  data-fid="{fid}" data-status="{status_val}" onclick="queConform(this,4)"  data-type="{types_val}" data-id="{id}" data-phone="{username}"  >不同意</span>
+			  </div>
+          </a>
+        </script>
+        <script type="text/javascript" src="/A6021579864710/static/js/1587545162386.js"></script>
+    </body>
+</html>
+
+

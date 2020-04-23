@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="GBK">
+        <title>去别人家看看</title>
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <link href="../css/li_style.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="../script/api.js"></script>
+      	 <script type="text/javascript" src="../script/fp_jquery.min.js"></script>
+		 <script type="text/javascript" src="../script/config.js"></script>
+
+      	 <script type="text/javascript" src="../script/commen.js?v=10"></script>
+      	 <script type="text/javascript" src="../script/upload.js"></script>
+      	 <script type="text/javascript" src="../script/vue.min.js"></script>
+         <script type="text/javascript" src="../script/layer_mobile/layer.js"></script>
+    </head>
+    <body> 
+        <section class="aui-flexView">
+            <header class="aui-navBar aui-navBar-fixed b-line">
+				<a href="javascript:history.back();" class="aui-navBar-item">
+						<i class="icon icon-return" style="background:url('../image/hback.png');background-size: 100%;"></i>
+				</a>
+                <div class="aui-center" style="margin-left: 15%; width: 80%; margin-right: 5%; float: right;">
+                    <div class="aui-jop-search">
+                        <i class="icon icon-search"></i>
+                        <input type="text" onkeyup="showFilerName(this)" placeholder="姓名">
+                    </div>
+                </div>
+            </header>
+            <section class="aui-scrollView">
+                
+                <div class="divHeight"></div>
+                <div class="aui-expert-list">
+                  
+                </div>
+            </section>
+        </section> 
+		<script class="temps" type="text/plain">
+		  <a href="javascript:;" class="aui-flex">
+                        <div class="aui-expert-user" style="    overflow: hidden;" onclick="intoSpace({uid},{qx})">
+                            <img class="" src="{pic}" alt="">
+                        </div>
+                        <div class="aui-flex-box">
+                            <h1>{uname}</h1>
+                            <h3>{bname}</h3>
+                            <span style="display:none;">
+                                <em onclick="intoZhu({uid},{qx},'{bname}')">进入主页</em>
+                                <em onclick="intoCi({uid},{qx},'{bname}')">进入次页</em> 
+                            </span>
+                         </div> 
+                        <div class="aui-expert-chat">
+                            <button onclick="intoSpace({uid},{qx},'{uname}')">
+                                <i class="icon icon-news"></i>
+                                参观主页
+                            </button>
+                        </div>
+                    </a>
+		</script>
+		<script type="text/javascript" src="/A6021579864710/static/js/1587545162049.js"></script>
+    </body>
+</html>

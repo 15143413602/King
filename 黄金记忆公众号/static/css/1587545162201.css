@@ -1,0 +1,16 @@
+
+		.WellRadio.WellRadioH label {
+		    line-height: 40px;
+		    height: 40px;
+		    background: #FFF;
+		    width: 50%;
+		    float: left;
+		    display: block;
+		    text-align: center;
+		}input[type=radio]{display:none}
+	  .mt-tabpage-item-cur {
+    color: #eb4537;
+    font-size: 14px;
+    border-bottom: 1px solid #F85B5E;
+   }
+		

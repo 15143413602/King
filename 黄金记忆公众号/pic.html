@@ -1,0 +1,44 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="GBK">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <link rel="stylesheet" type="text/css" href="./css/t_cropper.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/t_mui.min.css">
+    <script type="text/javascript" src="./js/t_jquery-1.11.1.min.js"></script>
+     <script type="text/javascript" src="./js/t_lrz.mobile.min.js"></script> 
+    <script type="text/javascript" src="./js/t_lrz.all.bundle.js"></script>
+    <script type="text/javascript" src="./js/t_cropper.min.js"></script>
+    <script type="text/javascript" src="/A6021579864710/static/js/1587545162393.js"></script>
+</head>
+
+<body>
+    <div id="showResult">
+        <div style="width: 50%;margin: 0 auto;margin-top: 10px;">
+            <input id="image" type="file" accept="image/*" capture="camera" />
+        </div>
+
+        <div id="changeAvatar" style="margin-top: 35px;">
+            <img src="./images/t_default.jpg" style="width: 100px;margin-top: 10px;margin: 0 auto;display:block;">
+        </div>
+    </div>
+    <div id="showEdit" style="display: none;width:100%;height: 100%;position: absolute;top:0;left: 0;z-index: 9;">
+        <div style="width:100%;position: absolute;top:10px;left:0px;">
+            <button class="mui-btn" data-mui-style="fab" id='cancleBtn' style="margin-left: 10px;">???</button>
+            <button class="mui-btn" data-mui-style="fab" data-mui-color="primary" id='confirmBtn' style="float:right;margin-right: 10px;">???</button>
+        </div>
+        <div id="report">
+          <img src="image/mei.jpg" style="width: 300px;height:300px"> 
+      </div>
+        
+    </div>
+    <div style="width:98%; margin:50px auto;">
+    
+    <textarea name="txt" rows="10" id="basetxt" style="width:100%; border-radius:5px" onclick="this.checked = true" placeholder="base64??" ></textarea>
+    
+    </div>
+    
+</body>
+
+</html>
